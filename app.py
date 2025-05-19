@@ -9,10 +9,11 @@ import blockChain as blockChain
 app = Flask(__name__)
 
 app.secret_key = 'your secret key'
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'ashwath'
-app.config['MYSQL_DB'] = 'EHR'
+app.config['MYSQL_HOST'] = 'sql12.freesqldatabase.com'
+app.config['MYSQL_USER'] = 'sql12779872'
+app.config['MYSQL_PASSWORD'] = 'PrlHFWHIbe'
+app.config['MYSQL_DB'] = 'sql12779872'
+app.config['MYSQL_PORT'] = 3306
 
 mysql = MySQL(app)
 
@@ -306,4 +307,6 @@ def docregister():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
