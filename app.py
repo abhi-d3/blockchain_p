@@ -10,17 +10,17 @@ app = Flask(__name__)
 
 app.secret_key = 'your secret key'
 app.config['MYSQL_HOST'] = 'sql12.freesqldatabase.com'
-app.config['MYSQL_USER'] = 'sql12779872'
-app.config['MYSQL_PASSWORD'] = 'PrlHFWHIbe'
-app.config['MYSQL_DB'] = 'sql12779872'
+app.config['MYSQL_USER'] = 'sql12782886'
+app.config['MYSQL_PASSWORD'] = 'CcuzWgi1Wp'
+app.config['MYSQL_DB'] = 'sql12782886'
 app.config['MYSQL_PORT'] = 3306
 
 mysql = MySQL(app)
 
 # ---------- EMAIL FUNCTION ----------
 def send_confirmation_email(to_email, subject, body):
-    sender_email = "vikasbablad062@gmail.com"         # Replace with your email
-    sender_password = "bnmuhxecryfwcdlc"         # Replace with your Gmail App Password
+    sender_email = "akshataskulkarni11@gmail.com"         # Replace with your email
+    sender_password = "Satish@123"         # Replace with your Gmail App Password
 
     msg = EmailMessage()
     msg.set_content(body)
